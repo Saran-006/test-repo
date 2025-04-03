@@ -1,0 +1,176 @@
+/* Copy right 2008 */
+/*svg from https://www.svgrepo.com/svg/520926/search-5 */
+
+body{
+  padding:0px 0px 0px 0px;
+  margin:0px 0px 0px 0px;
+}
+
+.nav-bar{
+  position: fixed;
+  bottom: 0%;
+  width:100dvw;
+  height:30px;
+  margin:0px 0px 0px 0px;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+}
+
+a{
+  text-decoration: none;
+  color: aliceblue;
+  height:30px;
+  padding-top:4px;
+  position: relative;
+  width:25dvw;
+  text-align: center;
+}
+
+a:hover{
+  background-color: aliceblue;
+  color: black;
+}
+
+.title{
+  width:98dvw;
+  height:40px;
+  text-align: center;
+  margin-left:1dvw;
+  padding-top:10px;
+  background-color:lightpink;
+  margin-top:5px;
+  margin-bottom:7px;
+}
+
+.sip{
+  width:35dvw;
+  height:25px;
+  border-radius:10px 0 0 10px;
+  margin-right: 0px;
+  background-color:lightpink;
+}
+
+.sib{
+  width:40px;
+  margin-left:0px;
+  transform: translateX(-3px);
+  height:30.6px;
+  border-radius:0px 10px 10px 0px;
+  padding-top:3px;
+  background-color: lightpink;
+}
+
+.sib:hover{
+  background-color: aliceblue;
+}
+
+.srch-set{
+  display: flex;
+  flex-direction: row;
+  margin-left:3px ;
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+
+.svg-srch{
+  width:30px;
+  height:30px;
+  /* outline:solid red 1px; */
+  transform: translateY(-2px);
+  margin-right:5px;
+}
+
+@keyframes round{
+
+  0%{
+      border-top:solid rgb(255, 255, 255) 2px;
+      border-right:solid white 2px;
+      border-bottom:solid white 2px;
+      border-left:solid white 2px;
+    
+  }
+
+  
+  100%{
+    border-top:solid rgb(0, 0, 0) 2px;
+    border-right:solid rgb(0, 0, 0) 2px;
+    border-bottom:solid rgb(0, 0, 0) 2px;
+    border-left:solid rgb(0, 0, 0) 2px;    
+  }
+
+}
+.premium{
+  background-color: antiquewhite;
+  width:30dvw;
+  height:20px;
+  margin-top:2px;
+  padding-top:2px;
+  margin-left:10px;
+  margin-right:3px;
+  text-align: center;
+  border-radius:10px;
+  padding-top:5px;
+  /* border: solid black 2px; */
+  animation:round 0.5s infinite alternate;
+}
+
+.og-srch{
+  width:75.3dvw;
+  height: 30px;
+  border-radius:10px 0 0 0px;
+  background-color: lightpink;
+}
+.og-srch-btn{
+  width:10dvw;
+  height: 35.5px;
+  border-radius:0px 10px 0px 0px;
+  background-color: lightpink;
+}
+
+.srch-form{
+  display:flex;
+  flex-direction: row;
+  margin-bottom:3px;
+}
+
+.recs{
+  margin-left:30px;
+  margin-top: 0%;
+}
+
+.rec{
+  width:85.5dvw;
+  height: 25px;
+  background-color: lightpink;
+  margin:0 0 3px 0;
+  padding-left:1dvw;
+  padding-top:6px;
+  display:flex;
+}
+
+.lrec{
+  width:85.5dvw;
+  height: 25px;
+  background-color: lightpink;
+  border-radius:0px 0px 10px 10px;
+  margin:0 0 0 0;
+  padding-left:1dvw;
+  display: flex;
+  padding-top:6px;
+}
+
+.rec:hover,.lrec:hover{
+  background-color:lightgreen;
+}
+
+.line{
+  height:1px;
+  width:100dvw;
+  background-color: black;
+  margin-top: 0%;
+  transform: translateY(-14px);
+}
+
+
+
