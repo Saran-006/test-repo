@@ -57,7 +57,6 @@ a:hover{
   transform: translateX(-3px);
   height:30.6px;
   border-radius:0px 10px 10px 0px;
-  padding-top:3px;
   background-color: lightpink;
 }
 
@@ -172,5 +171,46 @@ a:hover{
   transform: translateY(-14px);
 }
 
+@keyframes swipe{
+  0%{
+      transform: translateX(0%);
+    
+  }
+  100%{
+      transform: translateX(calc(-100% + 90dvw));
+    }
+}
+
+.ads{
+  height:220px;
+  /* background-color: aqua; */
+  width:fit-content;
+  margin:30px 5dvw 0 5dvw;
+  display: flex;
+  flex-direction: row;
+  animation:swipe 5s infinite;
+}
 
 
+.ad-pic{
+  width:150px;
+  height:150px;
+  border-radius:10px;
+  /* outline:solid black 1px; */
+  animation:round 1s infinite;
+  background:url("ad-pic.png");
+  background-size:100% 100%;
+  background-position:center;
+  background-repeat: no-repeat;
+  margin:3px 2dvw 2px 2dvw ;
+}
+
+.ad-name{
+  width:160px;
+  margin:3px 2dvw 2px 2dvw ;
+  overflow-y: hidden;
+  font-size: medium;
+}
+.srch-page{
+  overflow: hidden;
+}

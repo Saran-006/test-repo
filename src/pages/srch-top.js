@@ -1,5 +1,6 @@
 import { ReactComponent as Search} from './elements/search.svg'
 import { ReactComponent as Back} from './elements/back.svg'
+import Ads from './elements/ads.js'
 function Srchtop(){
 
     return(    <div className="srch-page" >
@@ -14,7 +15,7 @@ function Srchtop(){
             <p class="rec"><Search width="30px" height="30px" viewBox="0 1 25 30"/> rec</p>  
             <p class="lrec"><Search width="30px" height="30px" viewBox="0 1 25 30"/> rec</p>             
         </div>
-        
+        <Ads />
     </div>);
 }
 export default Srchtop;
