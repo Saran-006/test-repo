@@ -213,4 +213,13 @@ a:hover{
 }
 .srch-page{
   overflow: hidden;
+  margin-top:3dvh;
+}
+.back-btn{
+  outline: solid black 1px;
+  background-color:lightpink;
+  border-radius:5px;
+  width:25px;
+  height: 25px;
+  margin:0.5dvh 3px 0px 3px;
 }

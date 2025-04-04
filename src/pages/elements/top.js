@@ -12,13 +12,13 @@ function Top(){
     return(
     <div >
         <h2 className="title">Big Buyer</h2>
-    <div  className="srch-set" onClick={nav}>
+    <div  className="srch-set" >
     <Search width="30px" height="30px" />
-        <input className="sip" type="text" placeholder="Search ..."/>
-        <button class="sib"><Search width="20px" height="20px" /></button>
+        <input onClick={nav} className="sip" type="text" placeholder="Search ..."/>
+        <button onClick={nav} className="sib"><Search width="20px" height="20px" /></button>
 
-        <h5 className="premium">Try Premium</h5>
-    <Buy width="30px" height="30px" />
+        <h5 onClick={()=>{alert("No Premium available currently");}} className="premium">Try Premium</h5>
+    <Buy onClick={()=>{alert("No Premium available currently");}} width="30px" height="30px" />
     </div>
     <div className='line'></div>
     </div>
