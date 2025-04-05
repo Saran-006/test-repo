@@ -1,10 +1,15 @@
+import { useNavigate } from 'react-router-dom';
 function Navbar(){
+    const n=useNavigate();
+    const accnav=()=>{
+        console.log("account clicked");
+        n("/login");
+    }
     return(<div class="nav-bar">
-        <a href="http://127.0.0.1:5000/">home</a>
-        <a href="http://127.0.0.1:5000/">explore</a>
-        <a href="http://127.0.0.1:5000/">account</a>
-        <a href="http://127.0.0.1:5000/">news</a>
+        <a className='a' href='/'>home</a>
+        <a className='a' href="/explore">explore</a>
+        <p className='a' onClick={accnav} href="/login" >account</p>
+        <a className='a' href="/news" >news</a>
     </div>);
 }
-
 export default Navbar;
