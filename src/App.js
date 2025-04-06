@@ -6,7 +6,6 @@ import Login  from './pages/login.js'
 import Signin from './pages/signin.js'
 function App() {
   return (
-
       <Router>
       <nav>
         <Link to='/'></Link>
