@@ -348,6 +348,7 @@ z-index: index 10;
   width:90dvw;
   background-color:transparent;
 }
+
 .product:hover{
   box-shadow:0.5px 0.5px 0.25px 0.25px black,
   1px 1px 0.5px 0.5px rgb(48, 41, 41)
@@ -355,4 +356,150 @@ z-index: index 10;
   filter:saturate(200%);
   z-index:5;
 }
+
+.body-a{
+  max-width:100vw;
+  overflow-x: hidden;
+
+}
+
+.profile-pic{
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  background-color: aqua;
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  top:60px;
+  outline:solid black 1.5px;
+  z-index:5;
+}
+
+.change-btn{
+  position: absolute;
+  left:50%;
+  margin-left:80px;
+  transform: translateX(-50%);
+  margin-top:140px;
+  top:60px;
+  background-color:transparent;
+  /* background:url(73897432_JEMA\ LUIS\ 293-02.svg); */
+  outline-style:none;
+  border: 0px;
+}
+
+.h2{
+  width:calc(fit-content - 20dvw);
+  height:20px;
+  border:none;
+  outline-style:none;
+  font-size:32px;
+  text-align: center;
+  /* margin-top:40%; */
+  position: absolute;
+  top:285px;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+
+
+.b{
+  color: aliceblue;
+  text-decoration: none;
+  padding:5px;
+  width:25%;
+  text-align: center;
+}
+
+.b:focus{
+  background-color: aliceblue;
+  color: black;
+}
+
+.a1{
+  padding:10px;
+  text-decoration: none;
+  color: black;
+  font-size:18px;
+  background:linear-gradient(90deg,lightpink,lightpink,white);
+  
+}
+
+.a1:hover{
+  background:linear-gradient(90deg,rgb(252, 168, 181),lightpink,lightpink,white);
+}
+
+.aligner{
+  position: absolute;
+  display:flex;
+  flex-direction: column;
+  width: 95dvw;
+  margin-top:0px;
+  margin-right: 0%;
+  margin-left:2.5dvw;
+}
+
+.help{
+  position: absolute;
+  text-decoration: none;
+  width:95dvw;
+  text-align: center;
+  bottom: 5%;
+  margin-bottom:20px;
+}
+
+.btnx{
+  display:flex;
+  flex-direction: row;
+  width:20dvw;
+  margin-left:50%;
+  transform: translateX(-53%);
+}
+
+.per{
+  width:70dvw;
+  height:120px;
+  background-color: rgb(212, 252, 33);
+  position:fixed;
+  z-index:100;
+  padding:5px;
+  padding-left:10dvw;
+  padding-right:0px;
+  outline:solid black 1px;
+  border-radius:10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: none;
+  }
+
+.yes{
+  background-color: #39fa27;
+  border-width:0px;
+  padding:5px;
+  outline:solid black  1px;
+}
+
+.no{
+  background-color: #fa2727;
+  border-width:0px;
+  padding:5px;
+  outline:solid black  1px;
+}
+
+.positioner{
+  height:1.5px;
+  width:98vw;
+  background-color: black;
+  margin-top:340px;
+  margin-right:0px;
+}
+
+
+.prof-pic-container{
+  background-color: #39fa27;
+}
+
 

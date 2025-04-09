@@ -3,7 +3,7 @@ function Navbar(){
     const n=useNavigate();
     const accnav=()=>{
         console.log("account clicked");
-        n("/login");
+        n("/account");
     }
     return(<div class="nav-bar">
         <a className='a' href='/'>home</a>
