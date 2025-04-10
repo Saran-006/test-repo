@@ -4,7 +4,8 @@ import Home from './pages/Home.js'
 import Srchtop from './pages/srch-top.js'
 import Login  from './pages/login.js'
 import Signin from './pages/signin.js'
-import { Account } from './pages/elements/account-pg.js'
+import { Account } from './pages/account-pg.js'
+import { Explore } from './pages/explore-pg.js'
 function App() {
   return (
       <Router>
@@ -14,6 +15,7 @@ function App() {
         <Link to='/login'></Link>
         <Link to='/signin'></Link>
         <Link to='/account'></Link>
+        <Link to='/explore'></Link>
       </nav>
         <Routes>
           <Route path='/' element={<Home/>} />
@@ -21,6 +23,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/signin' element={<Signin />} />
           <Route path='/account' element={<Account />} />
+          <Route path='/explore' element={<Explore />} />
         </Routes>
       </Router>
 );
