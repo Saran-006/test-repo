@@ -1,11 +1,11 @@
-import {Ip,Port} from './elements/storage.js'
+import {UseStates} from './elements/storage'
 function Login(){
-    const addr="http://"+Ip+":"+Port;
-    
+    const {addr}=UseStates();
+    const address="http://"+addr.Ip+":"+addr.Port;
     return(
         <div class="login-page">
             <div class="login-container">
-                <form class="login-form" action={addr+"/"} method="post" >
+                <form class="login-form" action={address+"/"} method="post" >
                     <h1>Login</h1>
                     <input class="login-email" type="email" placeholder="Email" />
                     <input class="login-pass" type="password" placeholder="Password" />

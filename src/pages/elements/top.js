@@ -1,10 +1,11 @@
 import {ReactComponent as Buy} from './buy.svg'
 import {ReactComponent as Search} from './search.svg'
 import { useNavigate } from 'react-router-dom'
-import {Ip,Port} from './storage.js'
+import {UseStates} from './storage.js'
 function Top(){
-    console.log(Ip+Port);
+    const {addr}=UseStates();
     const n=useNavigate();
+    console.log(addr.Ip+addr.Port);
     const nav=()=>{
         console.log("Navigating to search page ...");
         n('/search');
