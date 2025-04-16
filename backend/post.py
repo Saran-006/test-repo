@@ -1,7 +1,8 @@
-import psycopg2
-conn=psycopg2.connect(dbname="ecom",host="127.0.0.1",port="7070",user="postgres",password="7070")
-cur=conn.cursor()
-cur.execute("SELECT * FROM user_data")
-a=cur.fetchall()
-for i in a:
+a=open("D:\\Saran\\saran-react\\ecom\\test-repo\\backend\\cookies.txt","a")
+a.write("hi ")
+a.close()
+b=open("D:\\Saran\\saran-react\\ecom\\test-repo\\backend\\cookies.txt","r")
+x=b.readlines()
+for i in x:
     print(i)
+b.close()

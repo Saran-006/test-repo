@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
 function Signin(){
+    const n=useNavigate();
+    const homnav=()=>{n("/");}
+    const lognav=()=>{n("/login");}
     return(
         <div class="login-page">
         <div class="login-container">
@@ -8,8 +12,8 @@ function Signin(){
                 <input class="login-email" type="email" placeholder="Email" />
                 <input class="login-pass" type="password" placeholder="Password" />
                 <button class="login-btn" >submit</button>
-                <a class="link2" href="/login">Login</a>
-                <a class="link2" href="/">stay Logged-out</a>
+                <p class="link2" onClick={lognav} >Login</p>
+                <p class="link2" onClick={homnav} >stay Logged-out</p>
             </form>
             <div class="glass"></div>
         </div>

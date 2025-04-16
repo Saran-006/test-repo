@@ -1,8 +1,13 @@
-from flask import Flask,send_from_directory,request,make_response
+from flask import Flask,send_from_directory,request,make_response,send_file
 from flask_cors import CORS 
 import ecom_logic
+
 ecom=Flask(__name__)
 CORS(ecom,supports_credentials=True)
+
+@ecom.route('/',methods=['GET','POST'])
+def build_base():
+    return send_file('build/index.html')
 
 cookies=set()
 cookie_email={}
@@ -43,4 +48,18 @@ def log_check():
             return "false"
     else:
         return "forbidden"
+@ecom.route('/accdet',methods=['GET','POST'])
+def acc_log():
+    if request.method=='GET':
+        if request.cookies.get("cookie") in cookies:
+            return ecom_logic.acc_log(cookie_email[request.cookies.get("cookie")])
+        else:
+            return "forbidden"
+    else:
+        return "forbidden"
+
+@ecom.route('/<path:path>',methods=['GET','POST'])
+def build_all(path):
+    return send_from_directory('build','index.html')
+
 ecom.run(debug=True)

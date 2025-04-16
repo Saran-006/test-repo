@@ -53,3 +53,10 @@ def generate():
     for i in range(6):
         s.append(random.choice("abcdefghijklmonpqrstuvwxyz1234567890QWERTYUIOPASDFGHJKLZXCVBNM"))
     return("".join(s))
+
+def acc_log(e):
+    connection=psycopg2.connect(dbname="ecom",host="127.0.0.1",port="7070",user="postgres",password="7070")
+    cursor=connection.cursor()
+    cursor.execute('SELECT * FROM user_data WHERE EMAIL=%s',(e,))
+    i=cursor.fetchone()
+    return i[1]+'[]'+i[4]

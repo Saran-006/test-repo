@@ -1,14 +1,32 @@
 import {ReactComponent as Account1} from './elements/edit.svg'
 import Navbar from "./elements/navbar"
+import { UseStates } from './elements/storage';
+import { useEffect } from 'react';
 export function Account(){
+    const {addr}=UseStates();
+    const address="http://"+addr.Ip+":"+addr.Port;
     function fileinp() {
         console.log("File input clicked");
     }
-
+    
     function permission() {
-        console.log("File selected");
+        console.log("File selected");   
     }
-
+    
+    useEffect(()=>{
+        fetch(address+"/accdet").then(response => response.text())
+        .then((data)=>{
+            let a=[];
+            a=data.split('[]');
+            document.getElementById("name-box").textContent=a[0];
+            fetch(address+"/static/"+a[1]).then(response=>response.blob())
+            .then((data)=>{
+                const uri=URL.createObjectURL(data);
+                document.getElementById("profile-pic").style.backgroundImage="url('"+uri+"')";
+            });
+        });
+    },);
+    
     function open1(){document.getElementById('filer').click();}
     return(
         <div style={{maxWidth:"98dvw"}}>
@@ -20,7 +38,7 @@ export function Account(){
         <button className="change-btn" onClick={open1} role="none" >
         <Account1 className="svg" />
         </button>
-        <input className="h2" id="name-box" type="text" value="123" />
+        <h2  className="h2" id="name-box">Name</h2>
         <form action="http://127.0.0.1:5000/" method="post" style={{display:"none"}} id="profile-form" encType="multipart/form-data" >
             <input type="file" id="filer" onClick={fileinp} onChange={permission} name="prof_file" accept=".jpg" />
         </form>

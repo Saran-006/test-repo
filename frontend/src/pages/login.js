@@ -40,6 +40,8 @@ function Login(){
             serverauth();
         }
     }
+    const fpnav=()=>{alert("Password changer in development");}
+    const signav=()=>{n("/signin");}
     return(
         <div class="login-page">
             <div class="login-container">
@@ -48,8 +50,8 @@ function Login(){
                     <input ref={e} class="login-email" type="email" placeholder="Email" />
                     <input ref={p} class="login-pass" type="password" placeholder="Password" />
                     <button class="login-btn" role="none" onClick={check} >submit</button>
-                    <a class="link" href="/forgetpassword">forget password</a>
-                    <a class="link" href="/signin">Sign in</a>
+                    <p className="link" onClick={fpnav} >forget password</p>
+                    <p className="link" onClick={signav} >Sign in</p>
                 </div>
                 <div class="glass"></div>
             </div>
