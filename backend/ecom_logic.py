@@ -59,4 +59,5 @@ def acc_log(e):
     cursor=connection.cursor()
     cursor.execute('SELECT * FROM user_data WHERE EMAIL=%s',(e,))
     i=cursor.fetchone()
+    print(i[1]+'[]'+i[4])
     return i[1]+'[]'+i[4]

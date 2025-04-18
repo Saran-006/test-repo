@@ -381,7 +381,7 @@ z-index: index 10;
   outline:solid black 1.5px;
   z-index:5;
   background-position: center;
-  background-size: cover;
+  background-size:110% 110%;
 }
 
 .change-btn{
@@ -531,3 +531,54 @@ z-index: index 10;
   box-shadow:1px 1px rgb(22, 22, 22),2px 2px rgb(52, 51, 51);
   background-color: rgb(129, 203, 227);
 }
+
+.terminal{
+  background-color: black;
+  padding-top:10px;
+  display: flex;
+  justify-content: center;
+}
+
+.terminal-body{
+  width:95dvw;
+  min-height:95dvh;
+  outline:double white 10px;
+  z-index: index 100;
+}
+
+.terminal-head{
+  width:95dvw;
+  color:white;
+  text-align: center;
+  outline:solid white 2px;
+  margin:0px 0px 0px 0px;
+  top:3px;
+  padding-top:10px;
+  padding-bottom: 10px;
+  position:sticky;
+  background-color: black;
+}
+
+.terminal-line{
+  color:white;
+  margin-left:5px;
+}
+
+@keyframes blinker{
+  0%{background-color:black;}
+  50%{background-color:black;}
+  51%{background-color: #fff;}
+  100%{background-color: #fff;}
+}
+
+.cursor{
+  background-color: #fff;
+  width:5px;
+  height:20px;
+  animation:blinker 0.8s infinite;
+}
+.terminal::selection{
+  background-color: #fff;
+  color:black;
+}
+

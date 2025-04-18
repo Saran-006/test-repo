@@ -1,6 +1,7 @@
 from flask import Flask,send_from_directory,request,make_response,send_file
 from flask_cors import CORS 
 import ecom_logic
+import admin_logic
 
 ecom=Flask(__name__)
 CORS(ecom,supports_credentials=True)
@@ -57,9 +58,15 @@ def acc_log():
             return "forbidden"
     else:
         return "forbidden"
+    
+@ecom.route('adminpanel701245',methods=['GET','POST'])
+def admin():
+    pass
+    
+
 
 @ecom.route('/<path:path>',methods=['GET','POST'])
 def build_all(path):
     return send_from_directory('build','index.html')
 
-ecom.run(debug=True)
+ecom.run(debug=True,port=5000)

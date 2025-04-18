@@ -14,6 +14,7 @@ export function Account(){
     }
     
     useEffect(()=>{
+        setTimeout(()=>{
         fetch(address+"/accdet").then(response => response.text())
         .then((data)=>{
             let a=[];
@@ -22,10 +23,10 @@ export function Account(){
             fetch(address+"/static/"+a[1]).then(response=>response.blob())
             .then((data)=>{
                 const uri=URL.createObjectURL(data);
-                document.getElementById("profile-pic").style.backgroundImage="url('"+uri+"')";
+                document.getElementById("prof-pic").style.backgroundImage="url('"+uri+"')";
             });
         });
-    },);
+    },);},500);
     
     function open1(){document.getElementById('filer').click();}
     return(
